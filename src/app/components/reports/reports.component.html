@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapor Görüntüleme</title>
+  <!-- Bootstrap kütüphanesini dahil et -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Form container -->
+  <div class="container mt-5">
+    <!-- Form başlığı -->
+    <h1>Rapor Görüntüleme</h1>
+    <!-- Form -->
+    <form>
+      <!-- TC numarası arama alanı -->
+      <div class="form-group">
+        <label for="patientTc">TC Numarası</label>
+        <input type="text" class="form-control" id="patientTc" placeholder="Raporu görüntülemek için TC numarasını giriniz">
+      </div>
+      <!-- Arama butonu -->
+      <button type="submit" class="btn btn-primary">Ara</button>
+    </form>
+    <!-- Rapor listesi container -->
+    <div class="container mt-5">
+      <!-- Rapor listesi başlığı -->
+      <h2>Raporlar</h2>
+      <!-- Rapor listesi -->
+      <table class="table">
+        <!-- Liste başlıkları -->
+        <thead>
+          <tr>
+            <th>kimlik no</th>
+            <th>Tanı</th>
+            <th>Tarih</th>
+            <th></th>
+          </tr>
+        </thead>
+        <!-- Liste verileri -->
+        <tbody>
+          <tr>
+            <td>3674276282378</td>
+            <td>Grip</td>
+            <td>01.01.2020</td>
+            <td><button class="btn btn-primary">İncele</button></td>
+          </tr>
