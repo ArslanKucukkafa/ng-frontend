@@ -12,6 +12,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { LaborantDetailComponent } from './components/admin/laborant-detail/laborant-detail.component';
 import { UnconfirmedLsComponent } from './components/admin/unconfirmed-ls/unconfirmed-ls.component';
 import { FormsModule } from '@angular/forms';
+import { PatientComponent } from './components/patient/patient.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     ReportAddComponent,
     AdminComponent,
     LaborantDetailComponent,
-    UnconfirmedLsComponent
+    UnconfirmedLsComponent,
+    PatientComponent
   ],
   imports: [
     FormsModule,

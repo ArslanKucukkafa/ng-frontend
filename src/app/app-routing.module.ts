@@ -8,6 +8,7 @@ import { ReportAddComponent } from './components/reports/report-add/report-add.c
 import { AdminComponent } from './components/admin/admin.component';
 import { LaborantDetailComponent } from './components/admin/laborant-detail/laborant-detail.component';
 import { UnconfirmedLsComponent } from './components/admin/unconfirmed-ls/unconfirmed-ls.component';
+import { PatientComponent } from './components/patient/patient.component';
 
 const routes: Routes = [
 {path:'login', component: LoginComponent},
@@ -19,7 +20,8 @@ const routes: Routes = [
 {path:'admin',component:AdminComponent},
 {path:'admin',children:[
 {path:'detail',component:LaborantDetailComponent},
-{path:'unconfirmed',component:UnconfirmedLsComponent}]}];
+{path:'unconfirmed',component:UnconfirmedLsComponent}]},
+{path:'patient',component:PatientComponent}];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
