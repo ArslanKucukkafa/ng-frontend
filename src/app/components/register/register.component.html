@@ -13,29 +13,33 @@
     <!-- Form başlığı -->
     <h1>Laborant Kayıt Ekranı</h1>
     <!-- Form -->
-    <form>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
       <!-- Hasta adı alanı -->
       <div class="form-group">
         <label for="patientFirstName">Ad</label>
-        <input type="text" class="form-control" id="patientFirstName" placeholder="Adınızı giriniz">
+        <div></div>
+        <input type="text" formControlName="name" placeholder="Adınızı giriniz">
       </div>
       <!-- Hasta soyadı alanı -->
       <div class="form-group">
         <label for="patientLastName">Soyad</label>
-        <input type="text" class="form-control" id="patientLastName" placeholder="Soyadınızı giriniz">
+        <div></div>
+        <input type="text" formControlName="surname" placeholder="Soyadınızı giriniz">
       </div>
       <!-- Hastane kimlik numarası alanı -->
       <div class="form-group">
         <label for="hospitalIdNumber">Hastane Kimlik Numarası</label>
-        <input type="text" class="form-control" id="hospitalIdNumber" placeholder="Hastane kimlik numaranızı giriniz">
+        <div></div>
+        <input type="text" formControlName="laborant_id" placeholder="7 haneli">
       </div>
             <!-- Sistem giriş şifresi -->
             <div class="form-group">
               <label for="hospitalIdNumber">Hastane Sistem Şifresi</label>
-              <input type="text" class="form-control" id="hospitalIdNumber" placeholder="Hastane sistem şifrenizi giriniz">
+              <div></div>
+              <input type="text" formControlName="password" placeholder="7 haneli">
             </div>
       <!-- Kaydol butonu -->
-      <button type="submit" class="btn btn-primary">Kaydol</button>
+      <input type="submit" class="btn btn-primary" value="Register">
     </form>
   </div>
 </body>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder ,ReactiveFormsModule} from '@angular/forms';
+import { RegisterService } from 'src/app/services/register.service';
+
 
 @Component({
   selector: 'app-register',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+   registerForm:any;
 
-  ngOnInit(): void {
-  }
+  constructor(private registerService:RegisterService,private formBuilder:FormBuilder) {}
 
+  ngOnInit(): void {}
+  
+  register():void{
+
+  } 
 }
