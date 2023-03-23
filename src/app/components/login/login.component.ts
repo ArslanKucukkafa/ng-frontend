@@ -3,6 +3,7 @@ import { FormBuilder ,ReactiveFormsModule} from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
 import { Response } from 'src/app/models/response';
+import { LoginResponse } from 'src/app/models/loginResponse';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,7 @@ import { Response } from 'src/app/models/response';
 export class LoginComponent implements OnInit {
 
 
-  private response!:Response;
+  private response!:LoginResponse;
 
   loginForm: any;
 
@@ -32,10 +33,13 @@ export class LoginComponent implements OnInit {
 
   login():void{
       this.loginService.loginLaborant(this.loginForm.value).subscribe(res =>{
-        console.log(res)
         this.response=res;
-        console.log(this.response.message)
-      })
+        if(this.response.status==true){
+          if(this.response.rol=="LABORANT"){this.router.navigate(['/report'])}
+        else{{this.router.navigate(['/admin'])}
+        }
+      }else{this.router.navigate(['/**'])}
+    })
   }
 
 }
