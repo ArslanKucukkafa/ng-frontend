@@ -1,5 +1,9 @@
-export interface Response {
-    message:string,
-    isSuccesfully:boolean,
-    status_code:number
+export class Response {
+    message:string;
+    status:boolean;
+
+    constructor(message:string,isSuccesfully:boolean){
+      this.status=isSuccesfully;
+      this.message= message;
+    }
   }
