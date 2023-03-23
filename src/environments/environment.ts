@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
   baseUrl:"http://localhost:8080",
-  signupUrl : "/api/vl/laboratories/save",
-  loginUrl : "/api/vI/laboratories/login",
+  signupUrl : "/api/v1/laboratories/save",
+  loginUrl : "/api/v1/laboratories/login",
   updateReport :"/api/v1/laboratories/updateReport",
   saveReport :"/api/v1/laboratories/saveReport",
   deleteReport :"/api/v1/laboratories/deleteReport",
   getReports :"/api/v1/laboratories/getAllReports",
-  getPatientReports :"/api/vl/laboratories/getAllPatientReports",
+  getPatientReports :"/api/v1/laboratories/getAllPatientReports",
   getCurrentUser :"/api/v1/laboratories/currentUser",
 
   // ADMIN ENDPOİNT Strings

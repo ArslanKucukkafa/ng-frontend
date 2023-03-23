@@ -13,16 +13,16 @@
     <!-- Form başlığı -->
     <h1>Laborant Giriş</h1>
     <!-- Form -->
-    <form>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
       <!-- Hastane kimlik numarası alanı -->
       <div class="form-group">
         <label for="hospitalIdNumber">Hastane Kimlik Numarası</label>
-        <input type="text" class="form-control" id="hospitalIdNumber" placeholder="Hastane kimlik numaranızı giriniz">
+        <input type="text" formControlName="laborant_id" placeholder="Hastane kimlik numaranızı giriniz">
       </div>
       <!-- Şifre alanı -->
       <div class="form-group">
         <label for="password">Şifre</label>
-        <input type="password" class="form-control" id="password" placeholder="Şifrenizi giriniz">
+        <input type="password" formControlName="password" placeholder="Şifrenizi giriniz">
       </div>
       <!-- Giriş butonu -->
       <button type="submit" class="btn btn-primary">Giriş</button>
