@@ -13,38 +13,38 @@
     <!-- Form başlığı -->
     <h1>Rapor Kayıt</h1>
     <!-- Form -->
-    <form>
+    <form >
       <!-- Hasta adı alanı -->
       <div class="form-group">
         <label for="patientFirstName">Hasta Adı</label>
-        <input type="text" class="form-control" id="patientFirstName" placeholder="Hasta adını giriniz">
+        <input type="text" [(ngModel)]="report.patient_firstname" name="firstname" class="form-control" id="patientFirstName" placeholder="Hasta adını giriniz">
       </div>
       <!-- Hasta soyadı alanı -->
       <div class="form-group">
         <label for="patientLastName">Hasta Soyadı</label>
-        <input type="text" class="form-control" id="patientLastName" placeholder="Hasta soyadını giriniz">
+        <input type="text" [(ngModel)]="report.patient_lastname" name="lastname" class="form-control" id="patientLastName" placeholder="Hasta soyadını giriniz">
       </div>
       <!-- Hasta kimlik numarası alanı -->
       <div class="form-group">
         <label for="patientIdNumber">Hasta Kimlik Numarası</label>
-        <input type="text" class="form-control" id="patientIdNumber" placeholder="Hasta kimlik numarasını giriniz">
+        <input type="text" [(ngModel)]="report.patient_identity_no" name="patient_identity_no" class="form-control" id="patientIdNumber" placeholder="Hasta kimlik numarasını giriniz">
       </div>
       <!-- Tanı başlığı alanı -->
       <div class="form-group">
         <label for="diagnosisTitle">Koyulan Tanı Başlığı</label>
-        <input type="text" class="form-control" id="diagnosisTitle" placeholder="Tanı başlığını giriniz">
+        <input type="text" [(ngModel)]="report.dfnTitle" name="dfnTitle" class="form-control" id="diagnosisTitle" placeholder="Tanı başlığını giriniz">
       </div>
       <!-- Tanı detayları alanı -->
       <div class="form-group">
         <label for="diagnosisDetails">Tanı Detayları</label>
-        <textarea class="form-control" id="diagnosisDetails" rows="3" placeholder="Tanı detaylarını giriniz"></textarea>
+        <textarea class="form-control" [(ngModel)]="report.dfnDetails" name="dfnDetails" id="diagnosisDetails" rows="3" placeholder="Tanı detaylarını giriniz"></textarea>
       </div>
       <!-- Fiziksel rapor fotoğrafı yükleme alanı -->
       <div class="form-group">
-        <label for="formFileMultiple" class="form-label">Multiple files input example</label>
-        <input class="form-control" type="file" id="formFileMultiple" multiple />
+        <label for="formFileMultiple" class="form-label">Rapor resmi</label>
+        <input class="form-control"  type="file" #selectFile value="select" (change)="onFileSelected($event)" />
       </div>
       <div class="form-group">
-        <td><button class="btn btn-primary">Kaydet</button></td>
+        <td><button class="btn btn-primary" (click)="save()">Kaydet</button></td>
       </div>
 

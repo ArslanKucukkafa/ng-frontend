@@ -15,12 +15,12 @@ export const environment = {
   getCurrentUser :"/api/v1/laboratories/currentUser",
 
   // ADMIN ENDPOİNT Strings
-  activateLaborant :"/api/v1/admin/laborantAccountActivate",
-  deleteLaborant :"/api/v1/admin/deleteLaborant",
-  roleUpgrage :"/api/v1/admin/changeRole",
+  activateLaborant :"/api/v1/admin/laborantAccountActivate?activated=true&laborant_id=",
+  deleteLaborant :"/api/v1/admin/deleteLaborant?laborant_id=",
+  roleUpgrage :"/api/v1/admin/changeRole?laborant_id=",
   getReportsWithLaborant :"/api/v1/admin/getAllReportsLaboratories",
-  getLaborants :"/api/v1/admin/getAllLaboratories}"
-
+  getLaborants :"/api/v1/admin/getAllLaboratories",
+  getLaborantDetails:"/api/v1/admin/laborantDetail?laborant_id="
 };
 
 /*

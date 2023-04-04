@@ -24,7 +24,7 @@ const routes: Routes = [
 {path:'unconfirmed',component:UnconfirmedLsComponent}]},
 {path:'patient',component:PatientComponent},
 {path:'**',component:ErrorComponent}
-];
+ ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
