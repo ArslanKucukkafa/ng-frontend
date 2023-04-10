@@ -15,19 +15,24 @@
     <!-- Tanı bilgisi -->
     <div class="form-group">
       <label for="diagnosis">Tanı</label>
-      <input type="text" class="form-control" id="diagnosis" value="Grip" readonly>
+      <input type="text" class="form-control" id="diagnosis" value="{{response.dfnTitle}}" >
     </div>
     <!-- Tanı açıklaması -->
     <div class="form-group">
       <label for="diagnosisDescription">Tanı Açıklaması</label>
-      <textarea class="form-control" id="diagnosisDescription" rows="3" readonly>Hasta grip belirtileri göstermektedir. Ağız, burun ve boğaz mukozasında iltihaplanma mevcuttur. Öksürük, burun akıntısı ve hapşırma gibi semptomlar da bulunmaktadır.</textarea>
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="5" id="comment">{{response.dfnDetails}}</textarea>
+      </div>
     </div>
     <!-- Tanıya ait resim -->
     <div class="form-group">
       <label for="diagnosisImage">Tanıya Ait Resim</label>
       <br>
       <!-- Tanıya ait resmi göster -->
-      <img src="grip-image.jpg" alt="Grip resmi">
+      <div>
+        <img id="myimage" [src]='thumbnail' />
+      </div>
       <!-- Sil ve kaydet butonları -->
       <div class="form-group text-center mt-5">
         <button class="btn btn-danger mr-3">Sil</button>

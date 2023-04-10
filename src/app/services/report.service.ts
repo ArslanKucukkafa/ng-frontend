@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpEvent, HttpRequest } from '@angular/common/http';
 import { Response} from '../models/response'
-import { Report, ReportGet } from '../models/report';
+import { Report, ReportDetail, ReportGet } from '../models/report';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Token } from '@angular/compiler';
@@ -14,6 +14,7 @@ export class ReportService {
 
   auth_token=localStorage.getItem("token")
 
+  report_ıd:number
 
 
   constructor(private http: HttpClient) { }
@@ -30,6 +31,11 @@ export class ReportService {
   }
 
   listReport(){
-    return this.http.get<ReportGet>(environment.baseUrl+environment.getReports,{headers:this.headers})
+    return this.http.get<ReportGet[]>(environment.baseUrl+environment.getReports,{headers:this.headers})
   }
+
+  detailReport(reportID:number){
+    return this.http.get<ReportDetail>(environment.baseUrl+environment.getReport+reportID,{headers:this.headers})
+  } 
+
 }

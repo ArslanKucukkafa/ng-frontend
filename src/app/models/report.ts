@@ -19,4 +19,22 @@ export interface ReportGet {
     create_date:Date    
 }
 
+export interface ReportDetail {
+    reportId:number
+    patient_firstname: string
+    patient_lastname: string
+    patient_identity_no: string
+    dfnTitle:string
+    dfnDetails:string
+    create_date:Date
+    image:Image  
+}
+
+export interface Image{
+    image_id:number
+    image_name:string
+    image_type:string
+    data:Blob
+}
+
 

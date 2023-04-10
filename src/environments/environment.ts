@@ -10,6 +10,7 @@ export const environment = {
   updateReport :"/api/v1/laboratories/updateReport",
   saveReport :"/api/v1/laboratories/saveReport",
   deleteReport :"/api/v1/laboratories/deleteReport",
+  getReport:"/api/v1/laboratories/getReport?reportId=",
   getReports :"/api/v1/laboratories/getAllReports",
   getPatientReports :"/api/v1/laboratories/getAllPatientReports",
   getCurrentUser :"/api/v1/laboratories/currentUser",

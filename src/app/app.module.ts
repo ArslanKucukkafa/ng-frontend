@@ -15,9 +15,6 @@ import { PatientComponent } from './components/patient/patient.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ErrorComponent } from './components/error/error.component';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from '../environments/environment';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +27,7 @@ import { environment } from '../environments/environment';
     UnconfirmedLsComponent,
     PatientComponent,
     SignupComponent,
-    ErrorComponent,
+    ErrorComponent
   ],
   imports: [
     HttpClientModule,

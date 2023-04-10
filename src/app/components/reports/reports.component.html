@@ -47,16 +47,18 @@
         <thead>
           <tr>
             <th>kimlik no</th>
-            <th>Tanı</th>
+            <th>Ad</th>
+            <th>Soyad</th>
             <th>Tarih</th>
             <th></th>
           </tr>
         </thead>
         <!-- Liste verileri -->
-        <tbody>
-          <tr>
-            <td>3674276282378</td>
-            <td>Grip</td>
-            <td>01.01.2020</td>
-            <td><button class="btn btn-primary">İncele</button></td>
+        <tbody >
+          <tr *ngFor="let report of reportArray">
+            <td>{{report["patient_identity_no"]}}</td>
+            <td>{{report["patient_firstname"]}}</td>
+            <td>{{report["patient_lastname"]}}</td>
+            <td>{{report["create_date"]}}</td>
+            <td><button class="btn btn-primary" (click)="detailReport(report.reportId)">İncele</button></td>
           </tr>
