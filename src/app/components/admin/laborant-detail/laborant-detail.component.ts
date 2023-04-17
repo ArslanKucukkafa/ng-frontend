@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DetailLaborant } from 'src/app/models/laborant';
 import { Response } from 'src/app/models/response';
 import { AdminService } from 'src/app/services/admin.service';
@@ -21,7 +22,7 @@ export class LaborantDetailComponent implements OnInit {
   reportCount:0
 }
 
-  constructor(private adminService:AdminService) { }
+  constructor(private adminService:AdminService,private router:Router) { }
 
   ngOnInit(): void {
     this.viewDetails()
@@ -49,5 +50,10 @@ export class LaborantDetailComponent implements OnInit {
     this.adminService.upgradeRole(this.DetailsDto.laborantId).subscribe(data => {
       console.log(data)
     })
+  }
+
+  clearLocalstore(){
+    this.adminService.clearLocalstorage();
+    this.router.navigate(["/signup"])
   }
 }

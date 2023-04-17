@@ -8,6 +8,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
+  <div>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <button type="button" class="btn btn-link" (click)="clearLocalstore()">logout</button>
+      </li>
+    </ul>
+  </div>
   <!-- Form container -->
   <div class="container mt-5">
     <!-- Form başlığı -->
@@ -25,17 +32,23 @@
         <textarea class="form-control" rows="5" id="comment">{{response.dfnDetails}}</textarea>
       </div>
     </div>
+    <!-- -->
+    <div class="form-group">
+      <label for="formFileMultiple" class="form-label">Yeni resim ekle</label>
+      <input class="form-control"  type="file" #selectFile value="select" (change)="onFileSelected($event)"  />
+    </div>
+
     <!-- Tanıya ait resim -->
     <div class="form-group">
       <label for="diagnosisImage">Tanıya Ait Resim</label>
       <br>
       <!-- Tanıya ait resmi göster -->
       <div>
-        <img id="myimage" [src]='thumbnail' />
+        <img [src]="thumbnail" />
       </div>
       <!-- Sil ve kaydet butonları -->
       <div class="form-group text-center mt-5">
-        <button class="btn btn-danger mr-3">Sil</button>
-        <button class="btn btn-success">Kaydet</button>
+        <button class="btn btn-danger mr-3" (click)="deleteReport()">Sil</button>
+        <button class="btn btn-success" (click)="updateReport()">Kaydet</button>
         </div>
     </div>

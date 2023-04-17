@@ -45,4 +45,8 @@ export class ReportsComponent implements OnInit {
     console.log(report_ıd)
     this.router.navigate(['report/details'])
   }
+
+  clearLocalstore(){
+    this.reportService.clearLocalstorage();
+  }
 }

@@ -12,9 +12,13 @@
     <li class="nav-item">
       <a class="nav-link" href="/admin/unconfirmed">Bekleyen Hesaplar</a>
     </li>
-    <!-- <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
-    </li> -->
+    <div>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <button type="button" class="btn btn-link" (click)="clearLocalstore()">logout</button>
+        </li>
+      </ul>
+    </div>
   </ul>
   <!-- Form container -->
   <div class="container mt-5">

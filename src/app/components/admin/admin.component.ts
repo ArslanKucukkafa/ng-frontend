@@ -39,4 +39,9 @@ export class AdminComponent implements OnInit {
   this.adminService.lab_id=lab_id
   this.router.navigate(['/admin/detail'])
   }
+
+
+  clearLocalstore(){
+    this.adminService.clearLocalstorage();
+  }
 }

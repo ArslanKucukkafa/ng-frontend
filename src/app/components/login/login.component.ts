@@ -34,16 +34,20 @@ export class LoginComponent implements OnInit {
   login():void{
       this.loginService.loginLaborant(this.loginForm.value).subscribe(res =>{
         this.response=res;
+        console.log(res)
         if(this.response.status==true){
           if(this.response.rol=="LABORANT"){
             localStorage.setItem("token",this.response.token)
             localStorage.setItem("rol",this.response.rol)
             this.router.navigate(['/report'])
           }
-        else{{
+        else if(this.response.rol=="ADMIN"){{
+          console.log("ADMIN")
+          localStorage.setItem("token",this.response.token)
+          localStorage.setItem("rol",this.response.rol)
           this.router.navigate(['/admin'])
-        }
-      }
+        }        
+      }else{this.router.navigate(['/**'])}
       }else{
         this.router.navigate(['/**'])
       }

@@ -46,4 +46,9 @@ export class UnconfirmedLsComponent implements OnInit {
     })
   }
 
+
+  clearLocalstore(){
+    this.adminService.clearLocalstorage();
+  }
+
 }

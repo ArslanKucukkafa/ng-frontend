@@ -66,4 +66,8 @@ export class ReportAddComponent implements OnInit {
         else{console.log("error oluştu aq")}
       })
   }
+
+  clearLocalstore(){
+    this.reportService.clearLocalstorage();
+  }
 }

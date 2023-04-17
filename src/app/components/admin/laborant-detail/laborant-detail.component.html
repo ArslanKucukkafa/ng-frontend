@@ -1,41 +1,58 @@
-<section class="bg-light">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-12 mb-4 mb-sm-5">
-              <div class="card card-style1 border-0">
-                  <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
-                      <div class="row align-items-center">
-                          <div class="col-lg-6 mb-4 mb-lg-0">
-                              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
-                          </div>
-                          <div class="col-lg-6 px-xl-10">
-                              <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
-                                  <h3 class="h2 text-white mb-0">{{DetailsDto.ad}}{{" "}}{{DetailsDto.soyad}}</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Title of the document</title>
+</head>
+<body>
+    <div>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <button type="button" class="btn btn-link" (click)="clearLocalstore()">logout</button>
+          </li>
+        </ul>
+      </div>
+
+    <section class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-4 mb-sm-5">
+                    <div class="card card-style1 border-0">
+                        <div class="card-body p-1-9 p-sm-2-3 p-md-6 p-lg-7">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 mb-4 mb-lg-0">
+                                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="...">
+                                </div>
+                                <div class="col-lg-6 px-xl-10">
+                                    <div class="bg-secondary d-lg-inline-block py-1-9 px-1-9 px-sm-6 mb-1-9 rounded">
+                                        <h3 class="h2 text-white mb-0">{{DetailsDto.ad}}{{" "}}{{DetailsDto.soyad}}</h3>
+                                    </div>
+                                    <ul class="list-unstyled mb-1-9">
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Role:</span>{{DetailsDto.rolename}}</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Laborant id:</span>{{DetailsDto.laborantId}}</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Ad:</span>{{DetailsDto.ad}}</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Soyad:</span>{{DetailsDto.soyad}}</li>
+                                        <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Report count:</span>{{DetailsDto.reportCount}}</li>
+                                    </ul>
+                                    <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
+                                        <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
+                                        <li><a href="#!"><i class="ti-facebook"></i></a></li>
+                                        <li><a href="#!"><i class="ti-pinterest"></i></a></li>
+                                        <li><a href="#!"><i class="ti-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-12 mb-4 mb-sm-5">
+                                  <div>
+                                    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="deleteUser()">Sil</button>
+                                    <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="roleUpgrade()">Admin Yap</button>
+                                  </div>
                               </div>
-                              <ul class="list-unstyled mb-1-9">
-                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Role:</span>{{DetailsDto.rolename}}</li>
-                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Laborant id:</span>{{DetailsDto.laborantId}}</li>
-                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Ad:</span>{{DetailsDto.ad}}</li>
-                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Soyad:</span>{{DetailsDto.soyad}}</li>
-                                  <li class="mb-2 mb-xl-3 display-28"><span class="display-26 text-secondary me-2 font-weight-600">Report count:</span>{{DetailsDto.reportCount}}</li>
-                              </ul>
-                              <ul class="social-icon-style1 list-unstyled mb-0 ps-0">
-                                  <li><a href="#!"><i class="ti-twitter-alt"></i></a></li>
-                                  <li><a href="#!"><i class="ti-facebook"></i></a></li>
-                                  <li><a href="#!"><i class="ti-pinterest"></i></a></li>
-                                  <li><a href="#!"><i class="ti-instagram"></i></a></li>
-                              </ul>
-                          </div>
-                          <div class="col-lg-12 mb-4 mb-sm-5">
-                            <div>
-                              <button type="button" class="btn btn-primary btn-lg btn-block" (click)="deleteUser()">Sil</button>
-                              <button type="button" class="btn btn-secondary btn-lg btn-block" (click)="roleUpgrade()">Admin Yap</button>
                             </div>
                         </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      
+</body>
+</html>
